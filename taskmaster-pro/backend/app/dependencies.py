@@ -5,8 +5,10 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 import os
+from .secrets.auth_secret import get_secret
 
-SECRET_KEY = os.getenv("SECRET_KEY", "61rz+v7+&gp^=%&s0k+w#+2-wvehy5f)4e)+^0bbh_7)jt^+%v")
+secrets = get_secret()
+SECRET_KEY = secrets["TASK_MASTER_PRO_AUTH_SECRET_KEY"]
 ALGORITHM = "HS256"
 
 # The OAuth2PasswordBearer class is used to create a dependency that can be used to authenticate users.

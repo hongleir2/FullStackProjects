@@ -26,3 +26,12 @@ def reindex_tasks(db: Session):
     for task in tasks:
         index_task(task)
     print("Reindexed all tasks")
+
+def test_elasticsearch_connection():
+    if es.ping():
+        print("Elasticsearch is connected!")
+    else:
+        print("Failed to connect to Elasticsearch!")
+
+if __name__ == "__main__":
+    test_elasticsearch_connection()

@@ -18,8 +18,6 @@
             "justMyCode": true,
             "cwd": "${workspaceFolder}/backend",
             "env": {
-                "DATABASE_URL": "postgresql://developers:Harry147@localhost:5432/taskmaster-datadb",
-                "SECRET_KEY": "61rz+v7+&gp^=%&s0k+w#+2-wvehy5f)4e)+^0bbh_7)jt^+%v",
                 "KAFKA_BOOTSTRAP_SERVER": "localhost:9092",
                 "ELASTICSEARCH_HOST": "localhost"
             }
